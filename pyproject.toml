@@ -1,0 +1,23 @@
+[project]
+name = "insider-compare"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Renan Domingos",email = "rna.domingos@hotmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "pandas (>=2.3.1,<3.0.0)",
+    "python-dotenv (>=1.1.1,<2.0.0)",
+    "oracledb (>=3.2.0,<4.0.0)",
+    "sqlalchemy (>=2.0.41,<3.0.0)",
+    "requests (>=2.32.5,<3.0.0)",
+    "loguru (>=0.7.3,<0.8.0)",
+    "tqdm (>=4.67.1,<5.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
