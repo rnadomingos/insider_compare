@@ -31,8 +31,8 @@ def delete_insder_users(headers, url):
 
     query = "SELECT * FROM cpfs_duplicados_temp"
 
-    # dataframe = run_sql(query)
-    dataframe = ["32591960801", "00465423531","15398780824","43709108896"]
+    dataframe = run_sql(query)
+    # Teste dataframe = ["32591960801", "00465423531","15398780824","43709108896"]
 
     dataframe_size = len(dataframe)
     cadence = (dataframe_size/900)/60
@@ -42,7 +42,7 @@ def delete_insder_users(headers, url):
 
     start = time.time()
     try:
-      for cliente in tqdm(dataframe, desc="Deleting", unit="row", file=sys.stderr, leave=True):
+      for cliente in tqdm(dataframe, desc="Deleting", unit=" row", file=sys.stderr, leave=True):
       # for cliente in dataframe: #['cod_cliente']:
           payload = json.dumps({
             "identifiers": {
